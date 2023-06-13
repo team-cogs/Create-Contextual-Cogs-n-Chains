@@ -1,7 +1,9 @@
 package mod.yourname.yourmodid;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
 import com.simibubi.create.repack.registrate.util.nullness.NonNullSupplier;
+import mod.yourname.yourmodid.chain.ChainItem;
 import mod.yourname.yourmodid.register.*;
 import mod.yourname.yourmodid.register.config.ModConfigs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,19 +26,25 @@ public class CreateAddon {
 
 	public static final NonNullSupplier<CreateRegistrate> registrate = CreateRegistrate.lazy(BuildConfig.MODID);
 
+	public static ItemEntry<ChainItem> CHAIN_ITEM = null;
+
 	public CreateAddon() {
-		modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		// TODO: Delete the tutorial and convert to kotlin
+		//modEventBus = FMLJavaModLoadingContext.get().getModEventBus(BuildConfig.MODID);
 		CreateRegistrate r = registrate.get();
 		ModItems.register(r);
 		ModBlocks.register(r);
 		ModEntities.register(r);
 		ModTiles.register(r);
-		if (DatagenModLoader.isRunningDataGen()) {
-			modEventBus.addListener((GatherDataEvent g) -> ModPonder.generateLang(r, g));
-		}
-		modEventBus.addListener((FMLClientSetupEvent e) -> ModPonder.register());
-		DistExecutor.unsafeRunWhenOn(Dist.CLIENT,
-				() -> ModPartials::load);
-		ModConfigs.register();
+
+		CHAIN_ITEM = r.item("chain", ChainItem::new).register();
+
+//		if (DatagenModLoader.isRunningDataGen()) {
+//			modEventBus.addListener((GatherDataEvent g) -> ModPonder.generateLang(r, g));
+//		}
+//		modEventBus.addListener((FMLClientSetupEvent e) -> ModPonder.register());
+//		DistExecutor.unsafeRunWhenOn(Dist.CLIENT,
+//				() -> ModPartials::load);
+//		ModConfigs.register();
 	}
 }
