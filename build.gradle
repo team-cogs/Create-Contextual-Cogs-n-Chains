@@ -15,6 +15,8 @@ buildscript {
 plugins {
     id'com.github.gmazzo.buildconfig' version '3.0.1'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.21'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.21'
 }
 
 apply plugin: 'net.minecraftforge.gradle'
@@ -109,10 +111,15 @@ repositories {
     maven {
         url "https://maven.tterrag.com/"
     }
+    maven {
+        url 'https://thedarkcolour.github.io/KotlinForForge/'
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    implementation 'thedarkcolour:kotlinforforge:3.12.0'
 
     implementation fg.deobf("com.simibubi.create:Create:mc${create_version}")
     implementation fg.deobf("com.jozufozu.flywheel:Flywheel-Forge:${flywheel_version}")
