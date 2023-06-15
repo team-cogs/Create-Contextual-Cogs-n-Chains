@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "package": "mod.teamcogs.c_cubic.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "c_cubic.refmap.json",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

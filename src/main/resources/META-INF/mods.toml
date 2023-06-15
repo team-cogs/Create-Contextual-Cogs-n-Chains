@@ -7,13 +7,13 @@ license = "GNU GPLv3"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId = "yourmodid" #mandatory TODO: change this!
+modId = "c_cubic" #mandatory TODO: change this!
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
 version = "${file.jarVersion}" #mandatory
 # A display name for the mod
-displayName = "Your Addon" #mandatory TODO: change this!
+displayName = "Create: Cogs n Chains" #mandatory TODO: change this!
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -26,11 +26,11 @@ displayName = "Your Addon" #mandatory TODO: change this!
 #authors = "You" #optional
 # The description text for the mod (multi line!) (#mandatory) TODO: change this!
 description = '''
-Your Create addon description!
+Add more functionality to Cogs n Chains!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 # TODO: change all of the depdendencies.yourmodid to dependencies.(your modid) !
-[[dependencies.yourmodid]] #optional
+[[dependencies.c_cubic]] #optional
 # the modid of the dependency
 modId = "forge" #mandatory
 # Does this dependency have to exist - if not, ordering below must be specified
@@ -42,16 +42,16 @@ ordering = "NONE"
 # Side this dependency is applied on - BOTH, CLIENT or SERVER
 side = "BOTH"
 # Here's another dependency
-[[dependencies.yourmodid]]
+[[dependencies.c_cubic]]
 modId = "minecraft"
 mandatory = true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
 versionRange = "[1.18.2,1.19)"
 ordering = "NONE"
 side = "BOTH"
-[[dependencies.yourmodid]]
+[[dependencies.c_cubic]]
 modId = "create"
 mandatory = true
-versionRange = "[0.5, 0.5.1)"
+versionRange = "[0.5.1,)"
 ordering = "AFTER"
 side = "BOTH"

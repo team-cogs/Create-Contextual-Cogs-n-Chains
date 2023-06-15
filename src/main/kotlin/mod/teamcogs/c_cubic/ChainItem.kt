@@ -1,7 +1,6 @@
-package mod.yourname.yourmodid.kinetic.chain
+package mod.teamcogs.c_cubic
 
-import com.simibubi.create.content.contraptions.relays.elementary.CogWheelBlock
-import com.simibubi.create.repack.registrate.util.nullness.NonNullFunction
+import com.simibubi.create.content.kinetics.simpleRelays.CogWheelBlock
 import net.minecraft.nbt.NbtUtils
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.sounds.SoundSource

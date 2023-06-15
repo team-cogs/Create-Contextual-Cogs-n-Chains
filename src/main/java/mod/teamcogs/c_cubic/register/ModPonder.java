@@ -1,4 +1,4 @@
-package mod.yourname.yourmodid.register;
+package mod.teamcogs.c_cubic.register;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.ponder.PonderLocalization;
