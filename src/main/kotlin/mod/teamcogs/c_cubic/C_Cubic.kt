@@ -3,6 +3,7 @@ package mod.teamcogs.c_cubic
 import com.simibubi.create.foundation.data.CreateRegistrate
 import com.tterrag.registrate.util.entry.ItemEntry
 import mod.TeamCogs.c_cubic.BuildConfig
+import mod.teamcogs.c_cubic.content.kinetic.chain.ChainItem
 import mod.teamcogs.c_cubic.register.ModBlocks
 import mod.teamcogs.c_cubic.register.ModEntities
 import mod.teamcogs.c_cubic.register.ModItems
@@ -18,14 +19,12 @@ class C_Cubic {
         // Directly reference a log4j logger.
         private val LOGGER = LogManager.getLogger(BuildConfig.MODID)
         var modEventBus: IEventBus? = null
-        @JvmField
         val registrate: CreateRegistrate = CreateRegistrate.create(BuildConfig.MODID)
-        @JvmField
         var CHAIN_ITEM: ItemEntry<ChainItem>? = null
     }
 
     init {
-        // TODO: Delete the tutorial and convert to kotlin
+        // TODO: Delete the tutorial and convert to kotlin for ponder
         //modEventBus = FMLJavaModLoadingContext.get().getModEventBus(BuildConfig.MODID);
         ModItems.register(registrate)
         ModBlocks.register(registrate)
