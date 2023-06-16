@@ -1,9 +1,10 @@
-package mod.teamcogs.c_cubic.register;
+package mod.teamcogs.c_cubic.register
 
-import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.data.CreateRegistrate
+import mod.teamcogs.c_cubic.pipecap.PipeCapBlock
 
-public class ModBlocks {
-    public static void register(CreateRegistrate registrate) {
-
+object ModBlocks {
+    fun register(registrate: CreateRegistrate?) {
+        registrate!!.block<PipeCapBlock>("pipe_cap") { PipeCapBlock(it) }.simpleItem().register()
     }
 }

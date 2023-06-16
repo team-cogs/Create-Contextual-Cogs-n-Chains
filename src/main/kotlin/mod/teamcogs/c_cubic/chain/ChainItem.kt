@@ -1,4 +1,4 @@
-package mod.teamcogs.c_cubic.content.kinetic.chain
+package mod.teamcogs.c_cubic.chain
 
 import com.simibubi.create.content.kinetics.simpleRelays.CogWheelBlock
 import net.minecraft.nbt.NbtUtils

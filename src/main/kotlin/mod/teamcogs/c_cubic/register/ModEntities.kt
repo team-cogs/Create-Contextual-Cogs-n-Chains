@@ -1,9 +1,7 @@
-package mod.teamcogs.c_cubic.register;
+package mod.teamcogs.c_cubic.register
 
-import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.simibubi.create.foundation.data.CreateRegistrate
 
-public class ModEntities {
-    public static void register(CreateRegistrate registrate) {
-
-    }
+object ModEntities {
+    fun register(registrate: CreateRegistrate?) {}
 }
