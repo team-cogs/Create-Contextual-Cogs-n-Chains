@@ -3,8 +3,7 @@ package mod.teamcogs.c_cubic.register
 import com.simibubi.create.AllItems
 import com.simibubi.create.foundation.data.CreateRegistrate
 import mod.TeamCogs.c_cubic.BuildConfig
-import mod.teamcogs.c_cubic.C_Cubic
-import mod.teamcogs.c_cubic.chain.ChainItem
+import mod.teamcogs.c_cubic.content.kinetic.chain.ChainItem
 import net.minecraft.world.item.CreativeModeTab
 import net.minecraft.world.item.ItemStack
 
